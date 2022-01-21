@@ -27,6 +27,20 @@ html {
 body {
     font-family: 'Cairo', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f6f6f6;
+    box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color-alt);
+}
 a {
     text-decoration: none;
 }
@@ -363,6 +377,33 @@ ul {
     animation: bouncing 1.5s infinite;
 }
 /* End Landing */
+
+/* Start Scroll To Top */
+.up {
+    position: fixed;
+    bottom: 10px;
+    right: -35px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 100;
+    transition: var(--main-transition);
+}
+.up:hover {
+    background-color: var(--main-color-alt);
+}
+.up i{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 8px;
+    width: 35px;
+    text-align: center;
+}
+.up.show {
+    right: 10px;
+}
+/* End Scroll To Top */
 
 /* Start Articles */
 .articles {
